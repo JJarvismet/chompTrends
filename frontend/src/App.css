@@ -1,0 +1,113 @@
+*{
+  font-family: 'Josefin Sans', sans-serif;
+  font-family: 'Outfit', sans-serif;
+}
+.App {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  flex-direction: column;
+  height: 100vh;
+  width: 100vw;
+  background: url(./wave.svg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: 0;
+}
+.App.startUp{
+  justify-content: center;
+}
+.App.startUp>form{
+  margin-bottom: 20rem;
+}
+.App>form{
+  width: 30%;
+  height: 4rem;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin-top: 5rem;
+}
+input{
+  border: none;
+  background: none;
+  color: white;
+  height: 100%;
+  width: 70%;
+  font-size: 2rem;
+}
+input:focus{
+  outline: none;
+}
+button{
+  height: 100%;
+  width: 29%;
+  padding: none;
+  margin: none;
+  background-color: #004173;
+  border: none;
+  border-radius: .5rem;
+  color: white;
+  font-size: 1.5rem;
+  font-weight: 700;
+}
+.chart-box{
+  width: max-content;
+  min-width: 70vw;
+  min-height: 34rem;
+}
+canvas{
+  margin: 3rem;
+}
+.score-label{
+  color: white;
+  margin-bottom: .5rem;
+}
+.score{
+  background-color: #c9364c;
+  height: 8rem;
+  width: 8rem;
+  font-size: 3rem;
+  color: white;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 900;
+  border: 2px solid white;
+}
+.err{
+  margin-top: 10rem;
+  color: rgb(146, 146, 146);
+  font-style: italic;
+  height: 50rem;
+}
+.load-box{
+  height: 50rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+
+@media(max-width:2010px){
+  button{
+    font-size: 1.4rem;
+  }
+}
+@media(max-width:1200px){
+  .App>form{
+    width: 50%;
+  }
+}
+@media(max-width:800px){
+  .chart-box{
+    width: 100vw;
+  }
+  .App>form{
+    width: 80%;
+  }
+  button{
+    font-size: 1.2rem;
+  }
+}
