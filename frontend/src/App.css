@@ -2,6 +2,9 @@
   font-family: 'Josefin Sans', sans-serif;
   font-family: 'Outfit', sans-serif;
 }
+html{
+  background-color: #001220;
+}
 .App {
   display: flex;
   align-items: center;
