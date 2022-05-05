@@ -59,7 +59,7 @@ function App() {
 
 
   const chartData = {
-    labels: ['Jan 2021', 'Feb 2021', 'Mar 2021', 'Apr 2021', 'May 2021', 'Jun 2021', 'Jul 2021', 'Aug 2021', 'Sep 2021', 'Oct 2021', 'Nov 2021', 'Dec 2021', 'Jan 2022', 'Feb 2022', 'Mar 2022', 'Apr 2021'],
+    labels: ['Jan 2021', 'Feb 2021', 'Mar 2021', 'Apr 2021', 'May 2021', 'Jun 2021', 'Jul 2021', 'Aug 2021', 'Sep 2021', 'Oct 2021', 'Nov 2021', 'Dec 2021', 'Jan 2022', 'Feb 2022', 'Mar 2022', 'Apr 2022'],
     datasets: [{
         label: title,
         data: data,
@@ -81,20 +81,18 @@ function App() {
         <input type="text" onChange={(e)=>{setQuery(e.target.value)}} placeholder="Search"/>
         <button type="submit">Ask the Sharks</button>
       </form>
-      <div>
-        {data.length>0 && !isError && !isLoading &&
-          <div className='chart-box'>
-            <Line
-              data={chartData}
-            />
-          </div>
-        }
-      </div>
       {score && !isError && !isLoading &&
         <>
           <span className='score-label'>shark rating</span>
           <span className='score'>{score}%</span>
         </>
+      }
+      {data.length>0 && !isError && !isLoading &&
+        <div className='chart-box'>
+          <Line
+            data={chartData}
+          />
+        </div>
       }
       {isError &&
         <span className='err'>no data found</span>

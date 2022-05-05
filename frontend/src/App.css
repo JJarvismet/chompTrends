@@ -7,8 +7,7 @@
   align-items: center;
   justify-content: flex-start;
   flex-direction: column;
-  height: 100vh;
-  width: 100vw;
+  min-height: 100vh;
   background: url(./wave.svg);
   background-size: cover;
   background-repeat: no-repeat;
@@ -26,7 +25,7 @@
   display: flex;
   flex-direction: row;
   align-items: center;
-  margin-top: 5rem;
+  margin: 5rem 0;
 }
 input{
   border: none;
@@ -35,6 +34,11 @@ input{
   height: 100%;
   width: 70%;
   font-size: 2rem;
+  font-weight: 200;
+  padding-left: 1rem;
+  border-bottom: 2px solid #004173;
+  margin-right: -2rem;
+  padding-right: 2rem;
 }
 input:focus{
   outline: none;
@@ -53,8 +57,8 @@ button{
 }
 .chart-box{
   width: max-content;
-  min-width: 70vw;
-  min-height: 34rem;
+  width: 80%;
+  margin-bottom: 5rem;
 }
 canvas{
   margin: 3rem;
@@ -102,12 +106,19 @@ canvas{
 }
 @media(max-width:800px){
   .chart-box{
-    width: 100vw;
+    width: 100%;
   }
   .App>form{
-    width: 80%;
+    flex-direction: column;
+  }
+  input{
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    margin-bottom: 1rem;
   }
   button{
-    font-size: 1.2rem;
+    width: 100%;
+    padding: .5rem 0;
   }
 }
